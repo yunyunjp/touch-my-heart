@@ -1,0 +1,14 @@
+<div class="main-visual-memo">
+</div>
+  <h2 class="page-title">MEMO</h2>
+
+
+<div class="wrapper grid">
+  <% @memos.each do |memo| %>
+  <div class="item">
+      <p><%= memo.heartstring %></p>
+      <span class="name"><%= memo.name %></span> 
+  </div>
+  <% end %>
+</div>
+<%= link_to "NEW MEMO", new_memo_path, class: :nav__btn %>

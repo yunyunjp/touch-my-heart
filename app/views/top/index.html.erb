@@ -1,7 +1,26 @@
-<div class="main-visual">
+<div id="home" class="big-bg">
+   <header class="page-header wrapper">
+   <h1>
+      <%= link_to image_tag("logo.png", class: :logo), root_path %>
+   </h1> 
+   <nav>
+      <ul class="main-nav">
+         <li><a href="#">ABOUT</a></li>
+         <li><a href="#">SERVICE</a></li>
+         <li><a href="#">CONTACT</a></li>
+      </ul>  
+   </nav>
+   </header>
+   <div class="home-content wrapper"> 
    <h2>EVERYTHING INCLUDING MYSELF IS CONSTANTLY CHANGING</h2>
+   <% unless user_signed_in? %>
+   <%= link_to "ログイン", new_user_session_path, class: :button %>
+   <%= link_to "新規登録", new_user_registration_path, class: :button %>
+   <% else %>
    <p>
-   <%= link_to "ログイン", root_path, class: :nav__btn %>
-   <%= link_to "新規登録", root_path, class: :nav__btn %>
+   <%= link_to "MEMO", memos_path, class: :nav__btn %>
+   <%= link_to "ログアウト", destroy_user_session_path, class: :nav__btn, method: :delete %>
+   <% end %>
    </p>
+   </div>
 </div>

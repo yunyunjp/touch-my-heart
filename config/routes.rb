@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'top#index'
-  resources :memos, only: :index
+  resources :memos
 end
