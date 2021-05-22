@@ -1,3 +1,27 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
 /* 大きな背景画像 */
 .big-bg {
     background-size: cover;
@@ -11,6 +35,8 @@
     font-family: 'Philosopher', serif;
     text-transform: uppercase;
     font-weight: normal;
+    color:#fff;
+    text-shadow: 0 0 10px #333;
 }
 .sub-title {
     font-size: 1.375rem;
@@ -143,6 +169,7 @@ article p {
     margin-bottom: 1rem;
 }
 
+
 /* サイドバー */
 aside {
     width: 22%;
@@ -169,7 +196,7 @@ aside p {
 /* MENU
 ------------------------------- */
 #menu {
-    background-image: url(../images/menu-bg.jpg);
+    background-image: url("main-bg.jpg");
     min-height: 100vh;
 }
 .menu-content {
@@ -195,8 +222,15 @@ aside p {
 /* CONTACT
 ------------------------------- */
 #contact {
-    background-image: url(../images/contact-bg.jpg);
+    background-image: url("main-bg.jpg");
+    background-color: #6e5064;
+    background-blend-mode: darken;
     min-height: 100vh;
+}
+
+.label {
+  color:#fff;
+  text-shadow: 0 0 10px #333;
 }
 
 /* フォーム */
@@ -210,6 +244,7 @@ label {
 }
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
     background: rgba(255,255,255,.5);
     border: 1px #fff solid;
@@ -218,7 +253,8 @@ textarea {
     font-size: 1rem;
 }
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     width: 100%;
     max-width: 240px;
 }
@@ -232,6 +268,10 @@ input[type="submit"] {
     cursor: pointer;
     line-height: 1;
 }
+
+.action {
+  margin-top: 40px;
+} 
 
 /* 店舗情報・地図 */
 #location {
@@ -355,8 +395,9 @@ footer p {
     /* フォーム */
     input[type="text"],
     input[type="email"],
+    input[type="password"],
     textarea {
-        max-width: 100%;
+        max-width: 95%;
     }
 
     /* 店舗情報・地図 / SNS */
